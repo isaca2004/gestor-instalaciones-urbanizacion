@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instalación</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/instalacion.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="../img/logo.png" class="logo-img">
+            <span>Urbaniza</span>
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <!-- Menú -->
+    <div id="menu" class="menu hidden">
+
+        <!-- Instalaciones -->
+        <div class="menu-section">
+            <p>Instalaciones</p>
+            <div class="menu-section">
+            <button onclick="irInicio()">Inicio</button>
+             <!--Instalaciones dinamicas-->
+            <div id="listaInstalaciones"></div>
+        </div>
+        </div>
+
+        <!-- Usuario -->
+        <div class="menu-section">
+            <p onclick="toggleUserMenu()" style="cursor:pointer;">Usuario ▼</p>
+
+            <div id="userSubmenu" class="hidden">
+                <button onclick="irDatos()">Datos de acceso</button>
+                <button onclick="logout()">Cerrar sesión</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <h1 id="titulo">Reserva</h1>
+
+        <div class="top-actions">
+            <button class="btn-info" onclick="abrirNormas()">Normas de reserva</button>
+            <button class="btn-info" onclick="abrirUso()">Información de uso</button>
+        </div>
+        <div id="calendario"></div>
+    </div>
+
+    
+
+    <!--Modal-->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>Realizar reserva</h2>
+                <span class="close" onclick="cerrarModal()">X</span>
+            </div>
+
+            <p id="modalText"></p>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="cerrarModal()">Cerrar</button>
+                <button class="btn-confirm" onclick="confirmarReservaFinal()">Realizar reserva</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal info-->
+    <div id="modalInfo" class="modal hidden">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="modalInfoTitle"></h2>
+                <span class="close" onclick="cerrarModalInfo()">X</span>
+            </div>
+
+            <div id="modalInfoText"></div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel" onclick="cerrarModalInfo()">Cerrar</button>
+                <button class="btn-confirm" onclick="cerrarModalInfo()">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p>© 2026 Urbaniza</p>
+
+        <div class="links">
+            <a href="../info/quienes.html">¿Quiénes somos?</a>
+            <a href="../info/privacidad.html">Política de privacidad</a>
+            <a href="../info/legal.html">Aviso legal</a>
+        </div>
+    </footer>
+    <script src="../config.js"></script>
+    <script src="instalacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.form-container{
+    width: 400px;
+    margin: 60px auto;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-container h1{
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.form-container input,
+.form-container select{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+.btn-confirm{
+    width: 100%;
+}

@@ -1,0 +1,218 @@
+/* ===== FONDO GENERAL ===== */
+body{
+
+    background: var(--background);
+    color: var(--primary);
+    min-height: 100vh;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px;
+
+    background: var(--primary);
+    color: white;
+}
+
+/* ===== LOGO ===== */
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+/* ===== ICONO MENÚ ===== */
+.menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ===== MENÚ ===== */
+.menu{
+    position: absolute;
+
+    top: 70px;
+    right: 10px;
+
+    background: var(--primary);
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    width: 220px;
+}
+
+/* ===== OCULTO ===== */
+.hidden{
+    display: none !important;
+}
+
+/* ===== SECCIONES ===== */
+.menu-section{
+    margin-bottom: 15px;
+}
+
+.menu-section p{
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* ===== BOTONES MENÚ ===== */
+.menu button{
+    width: 100%;
+
+    margin: 5px 0;
+
+    background: var(--secondary);
+
+    color: white;
+
+    border: none;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu button:hover{
+    background: var(--accent);
+}
+
+/* ===== GRID PRINCIPAL ===== */
+.panel-container{
+
+    width: 100%;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    flex: 1;
+}
+
+
+/* ===== TARJETAS ===== */
+.card{
+
+    background: var(--secondary);
+
+    color: white;
+
+    border-radius: 20px;
+
+    min-height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card:hover{
+
+    background: var(--accent);
+
+    transform: translateY(-5px);
+}
+
+.card h2{
+
+    font-size: 28px;
+
+    margin: 0;
+}
+
+/* ===== RESERVAS ===== */
+.reserva{
+
+    background: white;
+
+    color: var(--primary);
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== BOTÓN ELIMINAR ===== */
+.btn-delete{
+
+    background: #dc2626;
+
+    border: none;
+
+    padding: 6px 12px;
+
+    color: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    background: #b91c1c;
+}
+
+/* ===== MÓVIL ===== */
+
+@media (max-width: 768px){
+
+    .panel-container{
+
+        grid-template-columns: 1fr;
+
+        width: 100%;
+
+        padding: 15px;
+
+        gap: 20px;
+    }
+
+    .card{
+
+        width: 100%;
+
+        min-height: 160px;
+    }
+
+    .card h2{
+
+        font-size: 30px;
+    }
+}

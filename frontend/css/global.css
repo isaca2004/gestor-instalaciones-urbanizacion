@@ -1,0 +1,157 @@
+/* ===== VARIABLES ===== */
+:root{
+    --primary: #170C79;
+    --background: #EFE3CA;
+    --secondary: #56B6C6;
+    --accent: #8ACBD0;
+    --white: #ffffff;
+    --dark: #1e1e1e;
+}
+
+/* ===== RESET ===== */
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ===== HEADER ===== */
+.header{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img,
+.logo-img{
+    width: 50px !important;
+    height: 50px !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: var(--primary);
+    color: white;
+}
+
+.menu-icon{
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ===== MENÚ ===== */
+.menu{
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background: var(--primary);
+    padding: 20px;
+    border-radius: 15px;
+    width: 220px;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+#menu.hidden{
+    display: none !important;
+}
+
+.menu button{
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.menu button:hover{
+    background: var(--secondary);
+}
+
+/* ===== BOTONES ===== */
+.btn-confirm{
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn-confirm:hover{
+    background: var(--secondary);
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+footer .links a{
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+footer .links a:hover{
+    text-decoration: underline;
+}
+/* ===== LAYOUT GENERAL ===== */
+
+html,
+body{
+
+    min-height: 100vh;
+}
+
+body{
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+/* El contenido ocupa todo el espacio */
+
+main,
+.panel-container,
+.container{
+
+    flex: 1;
+}
+
+/* Footer siempre abajo */
+
+footer{
+
+    margin-top: auto;
+}

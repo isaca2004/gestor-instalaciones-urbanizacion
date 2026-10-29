@@ -1,0 +1,315 @@
+body{
+    background: var(--background);
+}
+
+/* CONTENEDOR */
+
+.container{
+
+    width: 95%;
+
+    margin: auto;
+
+    padding: 20px 0;
+}
+
+/* TITULO */
+
+h1{
+
+    color: var(--primary);
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+}
+
+/* BOTONES SUPERIORES */
+
+.top-actions{
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* CONTENEDOR SCROLL */
+
+#calendario{
+
+    overflow-x: auto;
+
+    width: 100%;
+}
+
+/* TABLA */
+
+.tabla{
+
+    display: grid;
+
+    grid-template-columns: 120px repeat(7, 1fr);
+
+    min-width: 900px;
+
+    margin-bottom: 15px;
+}
+
+/* CELDAS */
+
+.celda{
+
+    border: 1px solid #ccc;
+
+    padding: 12px;
+
+    text-align: center;
+
+    white-space: pre-line;
+
+    font-size: 1rem;
+}
+
+/* LIBRE */
+
+.libre{
+
+    background: var(--secondary);
+
+    color: white;
+
+    cursor: pointer;
+}
+
+/* RESERVADO */
+
+.ocupado{
+
+    background: #dc2626;
+
+    color: white;
+}
+
+/* TU RESERVA */
+
+.mia{
+
+    background: var(--primary);
+
+    color: white;
+}
+
+/* MODAL */
+
+.modal{
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 15px;
+
+    box-sizing: border-box;
+}
+
+.hidden{
+
+    display: none !important;
+}
+
+/* CONTENIDO MODAL */
+
+.modal-content{
+
+    background: white;
+
+    width: 100%;
+
+    max-width: 500px;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+/* BOTONES */
+
+.btn-info{
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    cursor: pointer;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+}
+
+.btn-info:hover{
+
+    background: var(--secondary);
+}
+
+/* ========================= */
+/* MÓVIL */
+/* ========================= */
+
+@media screen and (max-width: 768px){
+
+    h1{
+
+        font-size: 2.5rem;
+
+        line-height: 1.1;
+    }
+
+    .top-actions{
+
+        flex-direction: column;
+    }
+
+    .btn-info{
+
+        width: 100%;
+    }
+
+    .tabla{
+
+        min-width: 750px;
+    }
+
+    .celda{
+
+        padding: 10px;
+
+        font-size: 0.95rem;
+    }
+
+    .modal-content{
+
+        padding: 15px;
+    }
+}
+/* HEADER MODAL */
+
+.modal-header{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+/* BOTÓN X */
+
+.close{
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: var(--primary);
+
+    transition: 0.3s;
+}
+
+.close:hover{
+
+    color: #dc2626;
+}
+
+/* BOTONES MODAL */
+
+.modal-actions{
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+/* BOTÓN CERRAR */
+
+.btn-cancel{
+
+    background: #d1d5db;
+
+    color: #111827;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+.btn-cancel:hover{
+
+    background: #9ca3af;
+}
+
+/* BOTÓN CONFIRMAR */
+
+.btn-confirm{
+
+    background: var(--primary);
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 1rem;
+
+    transition: 0.3s;
+}
+
+.btn-confirm:hover{
+
+    background: var(--secondary);
+}

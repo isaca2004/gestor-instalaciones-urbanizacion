@@ -1,0 +1,46 @@
+body{
+    height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #170C79,
+        #56B6C6
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card{
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    background: #170C79;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
